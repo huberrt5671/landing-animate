@@ -43,7 +43,7 @@ export default function Home() {
     hidden: {
       x:0,
     },
-    show: (i) => ({
+    show: (i: any) => ({
       x:i,
       transition: {
         ease: 'easeOut',
@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <main className='h-screen px-4 overflow-hidden'>
       <motion.div className='absolute inset-0 w-screen h-screen z-0' variants={bgAnimate} initial="hidden" animate="show">
-        <Image src="/img/bg.webp" alt="background" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" priority={true} className='object-cover brightness-50' />
+        <Image src="/img/bg.webp.webp" alt="background" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" priority={true} className='object-cover brightness-50' />
       </motion.div>
 
       <motion.nav className='flex justify-between items-center text-white relative z-10 pt-4' variants={navAnimate} initial="hidden" animate="show">
@@ -116,24 +116,25 @@ export default function Home() {
           <li>Destination</li>
         </ul>
       </motion.nav>
-      <div className='relative top-[120px]'>
+      <div className='relative top-[100px]'>
         <motion.div className='relative left-[25%]' variants={textAnimate1} initial="hidden" animate="show">
           <motion.h1 className={`text-9xl text-[#eaeaea] lowercase tracking-tighter font-semibold z-10 ${pasifico.className}`} variants={textAnimate2} custom={-150}>PAINTING</motion.h1>
         </motion.div>
         <motion.p className='absolute top-12 right-32 z-10 w-[500px] text-justify leading-5 text-[#eaeaea] text-xs font-medium' variants={textParagraph} initial="hidden" animate="show"><span className='text-yellow-200'>The art of painting is a highly esteemed and revered form of artistic expression. It is a discipline that requires great skill, technique, and creativity.</span> Paintings have been created throughout history, serving as a means of communication, documentation, and aesthetic enjoyment.</motion.p>
         <motion.div className='relative left-[25%]' variants={textAnimate1} initial="hidden" animate="show">
-          <motion.h1 className='text-9xl text-yellow-200 font-semibold tracking-tighter z-10' variants={textAnimate2} custom={100}>EXPERIENCE</motion.h1>
+          <motion.h1 className='text-9xl text-yellow-200 font-semibold tracking-tighter z-100' variants={textAnimate2} custom={100}>EXPERIENCE</motion.h1>
         </motion.div>
       </div>
+      <br />
       <motion.div className='flex gap-4 absolute bottom-4' variants={imageAnimate} initial="hidden" animate="show">
         <motion.div className='relative w-[300px] h-[200px]' variants={imageAnimateChild}>
-          <Image src="/img/img-1.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
+          <Image src="/img/img-1.webp.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
         </motion.div>
         <motion.div className='relative w-[300px] h-[200px]' variants={imageAnimateChild}>
-          <Image src="/img/img-2.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
+          <Image src="/img/img-2.webp.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
         </motion.div>
         <motion.div className='relative w-[300px] h-[200px]' variants={imageAnimateChild}>
-          <Image src="/img/img-3.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
+          <Image src="/img/img-3.webp.webp" alt="image" fill sizes="(max-width:768px) 33vw, (max-width:1024px) 50vw, 100vw" className='object-cover rounded-sm saturate-150' />
         </motion.div>
       </motion.div>
     </main>
